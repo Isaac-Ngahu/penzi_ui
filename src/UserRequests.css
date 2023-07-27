@@ -1,0 +1,16 @@
+#append-messages {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: grey;
+}
+li {
+    display: inline-block;
+}
+.user-request {
+    display: inline-block;
+    justify-content:center;
+}
+.user-request button{
+    margin-left: 8px;
+}

@@ -17,7 +17,7 @@ function App() {
         <Route exact path='/home' Component={Home}/>
         <Route exact path='/login' Component={AdminLogin}/>
         <Route exact path='/users-list' Component={UsersList}/>
-        <Route exact path='requests' Component={UserRequests}/>
+        <Route exact path='/requests' Component={UserRequests}/>
       </Routes>
     </Router>
     </div>
