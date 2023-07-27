@@ -31,8 +31,6 @@ function UserRequests() {
                 setUserMessages(()=>["this user has no messages"])
             }else{
              setUserMessages(()=>data)}})
-        
-
     }
 
   return (

@@ -17,30 +17,33 @@ function AdminLogin() {
   }
   function handleSubmit(e){
     e.preventDefault()
+    if (data.user_name === null || data.password === null){
+      alert("please enter details")
+    }else{
     fetch('http://127.0.0.1:5000/admin',{
       method:"POST",
       headers:{
-        'Content-type':'applictaion/json'
+        'Content-type':'application/json'
       },
       body:JSON.stringify(data)
     })
     .then(response => response.json())
     .then(data =>{
-      if(data["error"]){
-        alert(data["error"])
+      if(data.Error){
+        alert(data.Error)
       }else{
         navigate('/users-list')
       }
     })
-  }
+  }}
   return (
     <div className='admin-login'>
       <h2>Enter your Details for admin priviledges:</h2>
       <form className='verify-admin' onSubmit={handleSubmit}>
         <label htmlFor="user_name">Enter user name:</label>
-        <input type="text" id="user_name" value={data.user_name} onChange={handleChange} />
+        <input type="text" id="user_name" required value={data.user_name} onChange={handleChange} />
         <label htmlFor="password">Enter password</label>
-        <input type="password" id='password' value={data.password} onChange={handleChange}/>
+        <input type="password" id='password' required value={data.password} onChange={handleChange}/>
         <button type='submit'> Verify</button>
       </form>
     </div>

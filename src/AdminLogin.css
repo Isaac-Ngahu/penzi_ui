@@ -2,6 +2,10 @@
     height: 620px;
     backdrop-filter:blur(10px);
     background-color: rgb(218, 193, 163);
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .verify-admin{
     width:fit-content;
@@ -14,14 +18,12 @@
     padding-bottom:50px;
     line-height: 20px;
     background-color:bisque;
-    margin-top: 30px;
+    margin-top: 10px;
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
-    border-radius:20px ;
-    margin-top:0;
+    border-radius:20px;
 }
 h2 {
     margin-bottom: 50px;
-    margin-left: 350px;
     border-radius: 8px;
 }
